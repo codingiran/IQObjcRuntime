@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "IQObjcRuntime.h"
 
 FOUNDATION_EXPORT double IQObjcRuntimeVersionNumber;
 FOUNDATION_EXPORT const unsigned char IQObjcRuntimeVersionString[];

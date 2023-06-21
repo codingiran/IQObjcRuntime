@@ -116,4 +116,15 @@ OverrideImplementation(Class targetClass, SEL targetSelector, id (^implementatio
         };\
     });
 
+#define ExtendImplementationOfNonVoidMethodWithTwoArguments(_targetClass, _targetSelector, _argumentType1, _argumentType2, _returnType, _implementationBlock) OverrideImplementation(_targetClass, _targetSelector, ^id(__unsafe_unretained Class originClass, SEL originCMD, IMP (^originalIMPProvider)(void)) {\
+        return ^_returnType (__unsafe_unretained __kindof NSObject *selfObject, _argumentType1 firstArgv, _argumentType2 secondArgv) {\
+            \
+            _returnType (*originSelectorIMP)(id, SEL, _argumentType1, _argumentType2);\
+            originSelectorIMP = (_returnType (*)(id, SEL, _argumentType1, _argumentType2))originalIMPProvider();\
+            _returnType result = originSelectorIMP(selfObject, originCMD, firstArgv, secondArgv);\
+            \
+            return _implementationBlock(selfObject, firstArgv, secondArgv, result);\
+        };\
+    });
+
 NS_ASSUME_NONNULL_END

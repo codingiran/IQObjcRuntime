@@ -1,0 +1,6 @@
+framework module IQObjcRuntime {
+  umbrella header "IQObjcRuntime-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,5 +1,5 @@
 PODS:
-  - IQObjcRuntime (0.1.0)
+  - IQObjcRuntime (0.3.1)
 
 DEPENDENCIES:
   - IQObjcRuntime (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  IQObjcRuntime: fb153c487ac7796d92ad1fb3bdc0d617571b3f01
+  IQObjcRuntime: a190858008ad3fb7fcbd95f42b911b7bb6b5833d
 
 PODFILE CHECKSUM: af401b44695031677350dd7247c8f794897db9e3
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.15.2

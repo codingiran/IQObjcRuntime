@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'IQObjcRuntime'
-  s.version          = '0.3.0'
+  s.version          = '0.3.1'
   s.summary          = 'A short description of IQObjcRuntime.'
 
 # This description is used to generate tags and improve search results.
@@ -32,6 +32,8 @@ TODO: Add long description of the pod here.
   s.osx.deployment_target = '10.11'
 
   s.source_files = 'IQObjcRuntime/Classes/**/*'
+  
+  s.resource_bundles = {'IQObjcRuntime_privacy' => ['IQObjcRuntime/Resources/PrivacyInfo.xcprivacy']}
   
   # s.resource_bundles = {
   #   'IQObjcRuntime' => ['IQObjcRuntime/Assets/*.png']
